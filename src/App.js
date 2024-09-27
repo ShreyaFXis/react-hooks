@@ -1,4 +1,3 @@
-
 import './App.css';
 import ClassCounter from './Components/ClassCounter';
 import ClassCounterTwo from './Components/ClassCounterTwo';
@@ -11,6 +10,10 @@ import IntervalHookCounter from './Components/IntervalHookCounter';
 import HookMouse from './Components/HookMouse';
 import Count1 from './Components/Hook Reducer/Count1';
 import Count2 from './Components/Hook Reducer/Count2';
+import LoginUseState from './Components/LoginUseState';
+import Home from './Components/Home';
+
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
@@ -25,11 +28,16 @@ function App() {
       <HookCounterFour/>
       <IntervalClassCounter/>
       <IntervalHookCounter/>
-      <HookMouse/>
+      <HookMoue/>
       <Count1/>
-      */}
       <Count2/>
-
+      */} 
+      <Router>
+      <Routes>
+        <Route path="/" element={<LoginUseState />} /> {/* Login page */}
+        <Route path="/dashboard" element={<Home />} /> {/* New page */}
+      </Routes>
+    </Router>
     </div>
   );
 }
